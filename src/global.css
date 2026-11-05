@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Berlin Food design tokens ──────────────────────────────────────────────
+   Default (light) values for the semantic color variables, as `r g b`
+   channels. The active scheme is applied at runtime by ThemeProvider
+   (src/theme/ThemeProvider.tsx) via NativeWind's vars(); these defaults only
+   cover first paint on web, where `prefers-color-scheme` is also honoured.
+
+   Keep the values in sync with src/theme/tokens.ts (single source of truth).
+   ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Surfaces — warm paper layers */
+  --color-background: 252 249 248;
+  --color-surface: 246 243 242;
+  --color-surface-variant: 234 231 231;
+  --color-surface-raised: 253 251 250;
+
+  /* Content */
+  --color-on-background: 28 27 27;
+  --color-on-surface: 28 27 27;
+  --color-on-surface-variant: 88 66 55;
+
+  /* Brand */
+  --color-primary: 159 66 0;
+  --color-on-primary: 252 249 248;
+  --color-accent: 242 113 33;
+  --color-on-accent: 84 31 0;
+  --color-accent-soft: 255 219 203;
+  --color-on-accent-soft: 84 31 0;
+
+  /* Lines — control affordances only */
+  --color-outline: 140 114 101;
+  --color-outline-variant: 223 192 178;
+
+  /* Feedback */
+  --color-error: 186 26 26;
+  --color-on-error: 252 249 248;
+  --color-error-container: 255 218 214;
+  --color-on-error-container: 147 0 10;
+  --color-success: 58 107 62;
+  --color-on-success: 242 250 240;
+  --color-success-container: 199 238 208;
+  --color-on-success-container: 12 59 24;
+
+  /* Inverse surfaces and the modal scrim */
+  --color-inverse-surface: 51 46 43;
+  --color-inverse-on-surface: 245 240 237;
+  --color-scrim: 28 27 27;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Warm espresso layers */
+    --color-background: 21 16 13;
+    --color-surface: 30 24 21;
+    --color-surface-variant: 41 34 32;
+    --color-surface-raised: 51 44 40;
+
+    --color-on-background: 239 232 227;
+    --color-on-surface: 239 232 227;
+    --color-on-surface-variant: 207 195 187;
+
+    --color-primary: 255 182 146;
+    --color-on-primary: 84 31 0;
+    --color-accent: 242 113 33;
+    --color-on-accent: 59 22 0;
+    --color-accent-soft: 74 42 24;
+    --color-on-accent-soft: 255 217 194;
+
+    --color-outline: 167 143 131;
+    --color-outline-variant: 82 68 61;
+
+    --color-error: 255 180 171;
+    --color-on-error: 105 0 5;
+    --color-error-container: 147 0 10;
+    --color-on-error-container: 255 218 214;
+    --color-success: 151 215 166;
+    --color-on-success: 12 59 24;
+    --color-success-container: 31 77 43;
+    --color-on-success-container: 183 239 195;
+
+    --color-inverse-surface: 245 240 237;
+    --color-inverse-on-surface: 51 46 43;
+    --color-scrim: 11 9 8;
+  }
+}

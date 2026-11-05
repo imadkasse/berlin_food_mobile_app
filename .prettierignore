@@ -1,0 +1,8 @@
+node_modules
+.expo
+dist
+web-build
+package-lock.json
+AGENT.md
+AGENTS.md
+Tasks.md
